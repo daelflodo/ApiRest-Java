@@ -1,4 +1,4 @@
-package com.dael.ApiRest.entities;
+package com.dael.ApiRest.persistence.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 @Table
 public class Product {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;

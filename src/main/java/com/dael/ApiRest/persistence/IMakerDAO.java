@@ -1,6 +1,6 @@
 package com.dael.ApiRest.persistence;
 
-import com.dael.ApiRest.entities.Maker;
+import com.dael.ApiRest.persistence.entities.Maker;
 
 import java.util.List;
 import java.util.Optional;

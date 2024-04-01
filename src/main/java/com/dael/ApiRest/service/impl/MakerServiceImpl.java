@@ -1,8 +1,7 @@
 package com.dael.ApiRest.service.impl;
 
-import com.dael.ApiRest.entities.Maker;
+import com.dael.ApiRest.persistence.entities.Maker;
 import com.dael.ApiRest.persistence.IMakerDAO;
-import com.dael.ApiRest.repository.MakerRepository;
 import com.dael.ApiRest.service.IMakerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

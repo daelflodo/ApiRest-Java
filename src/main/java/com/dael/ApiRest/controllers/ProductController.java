@@ -1,9 +1,7 @@
 package com.dael.ApiRest.controllers;
 
-import com.dael.ApiRest.controllers.dto.MakerDTO;
 import com.dael.ApiRest.controllers.dto.ProductDto;
-import com.dael.ApiRest.entities.Maker;
-import com.dael.ApiRest.entities.Product;
+import com.dael.ApiRest.persistence.entities.Product;
 import com.dael.ApiRest.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -50,7 +48,7 @@ public class ProductController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product not found");
     }
 
-    @PostMapping("/save")
+    @PostMapping("/create")
     public ResponseEntity<?> save(@RequestBody ProductDto productDto) throws URISyntaxException {
         if (productDto.getName().isBlank() || productDto.getPrice() == null || productDto.getMaker() ==null) {
             return ResponseEntity.badRequest().build();

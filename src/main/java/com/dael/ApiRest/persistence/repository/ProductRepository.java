@@ -1,6 +1,6 @@
-package com.dael.ApiRest.repository;
+package com.dael.ApiRest.persistence.repository;
 
-import com.dael.ApiRest.entities.Product;
+import com.dael.ApiRest.persistence.entities.Product;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

@@ -1,8 +1,8 @@
 package com.dael.ApiRest.persistence.impl;
 
-import com.dael.ApiRest.entities.Product;
+import com.dael.ApiRest.persistence.entities.Product;
 import com.dael.ApiRest.persistence.IProductDAO;
-import com.dael.ApiRest.repository.ProductRepository;
+import com.dael.ApiRest.persistence.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

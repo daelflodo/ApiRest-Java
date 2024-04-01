@@ -1,14 +1,14 @@
 package com.dael.ApiRest.controllers;
 
 import com.dael.ApiRest.controllers.dto.MakerDTO;
-import com.dael.ApiRest.entities.Maker;
+import com.dael.ApiRest.persistence.entities.Maker;
 import com.dael.ApiRest.service.IMakerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.*;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
@@ -35,6 +35,7 @@ public class MakerController {
 
     @GetMapping("/find/{id}")
     public ResponseEntity<?> findById(@PathVariable Long id) {
+        System.out.println("Estoy en /findOne");
         Optional<Maker> makerOptional = makerService.findById(id);
         if (makerOptional.isPresent()) {
             Maker maker = makerOptional.get();
@@ -44,8 +45,10 @@ public class MakerController {
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Maker not found");
     }
 
-    @PostMapping("/save")
+    @PostMapping("/create")
+//        @PreAuthorize("hasAnyRole('ADMIN')")
     public ResponseEntity<?> save(@RequestBody MakerDTO makerDTO) throws URISyntaxException {
+        System.out.println("Estoy en /create");
         if (makerDTO.getName().isBlank()) {
             return ResponseEntity.badRequest().build();
         }
@@ -75,7 +78,7 @@ public class MakerController {
             if (makerOptional.isPresent()) {
                 Maker maker = makerOptional.get();
                 makerService.deleteById(id);
-                return ResponseEntity.ok("Registro Elimanado");
+                return ResponseEntity.ok("Registro Eliminado");
             }
         return ResponseEntity.notFound().build();
         }

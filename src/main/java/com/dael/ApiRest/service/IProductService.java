@@ -1,6 +1,6 @@
 package com.dael.ApiRest.service;
 
-import com.dael.ApiRest.entities.Product;
+import com.dael.ApiRest.persistence.entities.Product;
 
 import java.math.BigDecimal;
 import java.util.List;

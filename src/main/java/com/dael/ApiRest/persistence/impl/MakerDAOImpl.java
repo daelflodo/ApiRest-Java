@@ -1,8 +1,8 @@
 package com.dael.ApiRest.persistence.impl;
 
-import com.dael.ApiRest.entities.Maker;
+import com.dael.ApiRest.persistence.entities.Maker;
 import com.dael.ApiRest.persistence.IMakerDAO;
-import com.dael.ApiRest.repository.MakerRepository;
+import com.dael.ApiRest.persistence.repository.MakerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

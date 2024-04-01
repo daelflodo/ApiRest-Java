@@ -1,6 +1,6 @@
 package com.dael.ApiRest.controllers.dto;
 
-import com.dael.ApiRest.entities.Product;
+import com.dael.ApiRest.persistence.entities.Product;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
